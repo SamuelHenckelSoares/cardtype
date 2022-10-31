@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body *{
+    font-family: 'Roboto';
+}
+
+body{
+    background: linear-gradient(151.79deg, #0F2B05 4.34%, #000000 87.6%);
+    height: 100vh;
+
+    text-align: center;
+}
+
+header{
+    
+    padding: 75px 0;
+}
+
+.card{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 304px;
+    height: 456px;
+
+    background-image: url(./assets/bg-ignite.svg);
+    
+    cursor: pointer;
+
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: appear .4s forwards;
+
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.card > .perfil{
+    width: 210px;
+    height: 260px;
+    object-fit: cover;
+    margin-top: 80px;
+    border-radius: 40%;
+
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.card > .cover{
+    background-image: url(./assets/elements-green.svg);
+    width: 262px;
+    height: 130.9px;
+    margin-top: -40px;
+    margin-left: 0%;
+    z-index: 1;
+    border-color: red;
+    border-radius: 11.8889px;
+}
+
+.card > .info{
+    text-align: left;
+    color: white;
+    font-size: 14px;
+    z-index: 2;
+    object-fit: cover;
+    margin-top: -100px;
+    margin-left: 30px;
+}
+
+.card > .brand{
+    width: 15%;
+    height: 8%;
+    margin-top:-5px;
+    margin-left: 210px;
+    z-index: 3;
+    border-radius: 11.8889px;
+}
+
+@keyframes appear {
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
